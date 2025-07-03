@@ -1,3 +1,5 @@
+"use client";
+
 import { Typography, Button, IconButton } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -34,7 +36,7 @@ export function Footer() {
             variant="h6"
             className="text-gray-900"
           >
-            Material Tailwind
+            公司名/平台名
           </Typography>
           <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
             {LINKS.map((link, index) => (
@@ -53,7 +55,7 @@ export function Footer() {
           </ul>
           <div className="flex w-fit justify-center gap-2">
             <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-twitter text-lg" />
+              <i className="fa-brands fa-weixin text-lg" />
             </IconButton>
             <IconButton size="sm" color="gray" variant="text">
               <i className="fa-brands fa-youtube text-lg" />

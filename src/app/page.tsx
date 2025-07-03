@@ -1,5 +1,6 @@
 // components
-import { Navbar, Footer } from "@/components";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 // sections
 import Hero from "./hero";

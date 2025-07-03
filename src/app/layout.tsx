@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Layout, FixedPlugin } from "@/components";
+import { ThemeProviderWrapper } from "@/components/theme-provider";
+import { FixedPlugin } from "@/components/fixed-plugin";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -29,12 +30,6 @@ export default function RootLayout({
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-      </head>
-      <body className={roboto.className}>
-        <Layout>
-          {children}
-          <FixedPlugin />
-        </Layout>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -42,6 +37,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+      </head>
+      <body className={roboto.className}>
+        <ThemeProviderWrapper>
+          {children}
+          <FixedPlugin />
+        </ThemeProviderWrapper>
       </body>
     </html>
   );

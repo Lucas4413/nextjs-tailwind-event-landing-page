@@ -35,7 +35,7 @@ export function Faq() {
       <div className="container mx-auto">
         <div className="text-center">
           <Typography variant="h1" color="blue-gray" className="mb-4">
-            Frequently asked questions
+            常见问题
           </Typography>
           <Typography
             variant="lead"
