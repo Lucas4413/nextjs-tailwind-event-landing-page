@@ -1,6 +1,7 @@
 import { useEffect, useState, RefObject } from "react";
 import Typed from "typed.js";
 
+// 打字动画的属性
 interface UseTypedOnVisibleOptions {
   strings: string[];
   typeSpeed?: number;
@@ -9,6 +10,7 @@ interface UseTypedOnVisibleOptions {
   showCursor?: boolean;
 }
 
+// hook函数用于通过ref绑定组件与动画效果
 export function useTypedOnVisible(
   targetRef: RefObject<HTMLElement>,
   options: UseTypedOnVisibleOptions
@@ -39,7 +41,7 @@ export function useTypedOnVisible(
           setHasTyped(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0 }
     );
 
     observer.observe(targetRef.current);

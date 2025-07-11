@@ -7,7 +7,10 @@ const config: Config = withMT({
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {},
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/typography')
+  ],
 });
 
 export default config;

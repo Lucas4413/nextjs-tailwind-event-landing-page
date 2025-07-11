@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -55,17 +56,17 @@ const NAV_MENU = [
 ];
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
-  const handleOpen = () => setOpen((cur) => !cur);
+  // const handleOpen = () => setOpen((cur) => !cur);
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
-  }, []);
+  // React.useEffect(() => {
+  //   window.addEventListener(
+  //     "resize",
+  //     () => window.innerWidth >= 960 && setOpen(false)
+  //   );
+  // }, []);
 
   React.useEffect(() => {
     function handleScroll() {
@@ -87,10 +88,24 @@ export function Navbar() {
       fullWidth
       blurred={false}
       color={isScrolling ? "white" : "transparent"}
+      // color="white"
       className="fixed top-0 z-50 border-0"
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography
+      {/* <div className="container mx-auto flex items-center justify-between"> */}
+      <div className="container flex items-center justify-between">
+        <a href="https://www.yaozh.com/" target="_blank" rel="noopener noreferrer">
+          {isScrolling?
+            <img
+            className="w-[20%] h-auto"
+            src="/image/药智网_标准.png"
+            alt="药智网Logo"
+            /> : 
+            <img
+            className="w-[20%] h-auto"
+            src="/image/药智网_反白.png"
+            alt="药智网Logo"/>}
+        </a>
+        {/* <Typography
           color={isScrolling ? "blue-gray" : "white"}
           className="text-lg font-bold"
         >
@@ -127,9 +142,9 @@ export function Navbar() {
           ) : (
             <Bars3Icon strokeWidth={2} className="h-6 w-6" />
           )}
-        </IconButton>
+        </IconButton> */}
       </div>
-      <Collapse open={open}>
+      {/* <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-gray-900">
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
@@ -146,7 +161,7 @@ export function Navbar() {
             </a>
           </div>
         </div>
-      </Collapse>
+      </Collapse> */}
     </MTNavbar>
   );
 }

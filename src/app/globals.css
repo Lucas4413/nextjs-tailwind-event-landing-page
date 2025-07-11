@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind typography;
+
+.conversation-card-body {
+  padding-bottom: 2.5rem;
+}
+
+.conversation-card-body th, .conversation-card-body h3{
+  color: black;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.markdown-content table thead {
+  background-color: #f3f4f6; /* 可选：灰色表头 */
+}

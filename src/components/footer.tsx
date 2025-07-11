@@ -1,74 +1,72 @@
 "use client";
 
 import { Typography, Button, IconButton } from "@material-tailwind/react";
+import Copyright from "./Copyright";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Company", "About Us", "Team", "Products", "Blog"];
-
+// const LINKS = ["关于我们", "产品与服务", "资质荣誉", "联系我们", "帮助中心"];
+const LINKS = [{
+  content: "关于我们",
+  linkto: "https://about.yaozh.com/intro.html"
+},
+{
+  content: "产品与服务",
+  linkto: "https://about.yaozh.com/about.html"
+},
+{
+  content: "资质荣誉",
+  linkto: "https://about.yaozh.com/qualification.html"
+},
+{
+  content: "联系我们",
+  linkto: "https://about.yaozh.com/contact.html"
+},
+{
+  content: "帮助中心",
+  linkto: "https://help.yaozh.com/"
+},]
 export function Footer() {
   return (
-    <footer className="pb-5 p-10 md:pt-10">
+    <footer className="pb-5 md:pt-10 border-t-[3px]">
       <div className="container flex flex-col mx-auto">
-        <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 max-w-6xl mx-auto rounded-2xl p-5 ">
-          <Typography
-            className="text-2xl md:text-3xl text-center font-bold "
-            color="white"
-          >
-            Join now and get 30% OFF!
-          </Typography>
-          <Typography
-            color="white"
-            className=" md:w-7/12 text-center my-3 !text-base"
-          >
-            Don&apos;t miss out on this exclusive offer that will end soon.
-          </Typography>
-          <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
-            <Button color="white" size="md">
-              buy ticket
-            </Button>
-          </div>
-        </div>
         <div className="flex flex-col md:flex-row items-center !justify-between">
-          <Typography
-            as="a"
-            href="https://www.material-tailwind.com"
-            target="_blank"
-            variant="h6"
-            className="text-gray-900"
-          >
-            公司名/平台名
-          </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
-            {LINKS.map((link, index) => (
-              <li key={index}>
-                <Typography
-                  as="a"
-                  href="#"
-                  variant="small"
-                  color="white"
-                  className="font-normal !text-gray-700 hover:!text-gray-900 transition-colors"
-                >
-                  {link}
-                </Typography>
-              </li>
-            ))}
-          </ul>
-          <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-weixin text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-youtube text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-instagram text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-github text-lg" />
-            </IconButton>
+          <a href="https://www.yaozh.com/" target="_blank" rel="noopener noreferrer" className="flex-1">
+            <img
+            className="w-[50%] h-auto"
+            src="/image/赞.jpg"
+            alt="药智网Logo"/>
+          </a>
+          <div className="flex-2">
+            <ul className="flex my-4 md:my-0 mx-auto items-center gap-4 w-full">
+              {LINKS.map((link, index) => (
+                <li key={index}>
+                  <Typography
+                    as="a"
+                    href={link.linkto}
+                    variant="small"
+                    color="white"
+                    target="_blank"
+                    className="font-normal !text-gray-700 hover:!text-gray-900 transition-colors"
+                  >
+                    {link.content}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+            <Copyright/>
+          </div>
+          <div className="flex-1 flex flex-col w-fit gap-2 pl-[3rem]">
+            <div className="flex flex-col items-center">
+              <img alt="微信公众号" src="/image/yaozh.png" className="w-[60%] h-auto"></img>
+              <span>药智网公众号</span> 
+            </div>
+            <div className="flex flex-col items-center">
+              <img alt="企业试用申请" src="/image/qrcode-zhihu.png"className="w-[60%] h-auto"></img>
+              <span>药智数据试用申请</span>
+            </div>
           </div>
         </div>
-        <Typography
+        {/* <Typography
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"
         >
@@ -81,7 +79,7 @@ export function Footer() {
             Creative Tim
           </a>
           .
-        </Typography>
+        </Typography> */}
       </div>
     </footer>
   );
