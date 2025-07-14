@@ -19,7 +19,7 @@ interface AboutCardProp {
 export function ConversationCard({ title = "", question = "", answer = "" }: AboutCardProp) {
   return (
     <Card shadow={false} className="">
-      <CardBody className="conversation-card-body h-[600px] p-5 flex flex-col justify-start rounded-2xl bg-white">
+      <CardBody className="conversation-card-body h-[600px] py-5 px-[3.25rem] flex flex-col justify-start rounded-2xl bg-white">
         <div className="text-black font-bold text-4xl mb-2 text-center">{title}</div>
         
         {/* 设置边框分割标题和问答 */}
