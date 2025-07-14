@@ -2,7 +2,7 @@ import React from "react";
 
 const Copyright = () => {
   return (
-    <div className="copyright pt-[1rem]">
+    <div className="copyright md:pt-[1rem]">
       <p>
         互联网增值电信业务许可证编号：     <a href="https://beian.miit.gov.cn/" target="_blank" className="hover:underline"> 渝B2-20120028 | 渝ICP备10200070号-3</a>&nbsp;
         互联网药品信息服务资格证：      (渝)-经营性-2021-0017
