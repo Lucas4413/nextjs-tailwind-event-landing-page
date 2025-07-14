@@ -25,12 +25,11 @@ function Hero() {
           700亿参数大模型基座
         </Typography>
         <div className="flex items-center gap-4">
-          <Button variant="gradient" color="white">
-            开始体验
-          </Button>
-          <IconButton className="rounded-full bg-white p-6">
-            <PlayIcon className="h-4 w-4 text-gray-900" />
-          </IconButton>
+          <a href="https://chatmeds.yaozh.com/home" target="_blank">
+            <Button variant="gradient" color="white" className="bg-white text-black hover:bg-gray-200">
+              立即申请
+            </Button>
+          </a>
         </div>
       </div>
     </div>
