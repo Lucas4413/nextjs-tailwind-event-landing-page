@@ -56,17 +56,17 @@ const NAV_MENU = [
 ];
 
 export function Navbar() {
-  // const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
-  // const handleOpen = () => setOpen((cur) => !cur);
+  const handleOpen = () => setOpen((cur) => !cur);
 
-  // React.useEffect(() => {
-  //   window.addEventListener(
-  //     "resize",
-  //     () => window.innerWidth >= 960 && setOpen(false)
-  //   );
-  // }, []);
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpen(false)
+    );
+  }, []);
 
   React.useEffect(() => {
     function handleScroll() {
@@ -91,19 +91,14 @@ export function Navbar() {
       // color="white"
       className="fixed top-0 z-50 border-0"
     >
-      {/* <div className="container mx-auto flex items-center justify-between"> */}
-      <div className="container flex items-center justify-between">
-        <a href="https://www.yaozh.com/" target="_blank" rel="noopener noreferrer">
-          {isScrolling?
-            <img
-            className="w-[20%] h-auto"
-            src="/image/药智网_标准.png"
+      <div className="container mx-auto flex items-center justify-between">
+      {/* <div className="container flex items-center justify-between"> */}
+        <a href="https://www.yaozh.com/" target="_blank" rel="noopener noreferrer" className="basis-1/2">
+          <img
+            className="md:w-[20%] w-[60%] h-auto"
+            src={isScrolling ? "/image/药智网_标准.png" : "/image/药智网_反白.png"}
             alt="药智网Logo"
-            /> : 
-            <img
-            className="w-[20%] h-auto"
-            src="/image/药智网_反白.png"
-            alt="药智网Logo"/>}
+          />
         </a>
         {/* <Typography
           color={isScrolling ? "blue-gray" : "white"}
@@ -122,16 +117,16 @@ export function Navbar() {
               <span>{name}</span>
             </NavItem>
           ))}
-        </ul>
-        <div className="hidden items-center gap-4 lg:flex">
+        </ul> */}
+        <div className="basis-1/2 flex items-center gap-4 justify-end">
           <Button color={isScrolling ? "gray" : "white"} variant="text">
             登录
           </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
+          {/* <a href="https://www.material-tailwind.com/blocks" target="_blank">
             <Button color={isScrolling ? "gray" : "white"}>博客</Button>
-          </a>
+          </a> */}
         </div>
-        <IconButton
+        {/* <IconButton
           variant="text"
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
@@ -144,8 +139,8 @@ export function Navbar() {
           )}
         </IconButton> */}
       </div>
-      {/* <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
+      {/* <Collapse open={open} className="absolute">
+        <div className="ml-auto mt-4 rounded-lg bg-white px-1 py-2 w-[20%] text-center border-2 border-black">
           <ul className="flex flex-col gap-4 text-gray-900">
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href}>
@@ -154,8 +149,8 @@ export function Navbar() {
               </NavItem>
             ))}
           </ul>
-          <div className="mt-6 flex items-center gap-4">
-            <Button variant="text">登录</Button>
+          <div className="flex items-center gap-4">
+            <Button variant="text" className="">登录</Button>
             <a href="https://www.materila-tailwind.com/blocks" target="_blank">
               <Button color="gray">博客</Button>
             </a>
