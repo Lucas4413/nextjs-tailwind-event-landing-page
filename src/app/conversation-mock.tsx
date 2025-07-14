@@ -35,7 +35,7 @@ export function ConversationMock() {
   })
 
   return (
-    <section className="container mx-auto flex flex-row items-center px-4 py-10">
+    <section className="container mock-conversation mx-auto flex flex-col-reverse md:flex-row items-center px-4 py-10">
       {/* <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {CONVERSATIONS.map((item, idx) => (
           <ConversationCard key={idx} {...item} />
@@ -49,7 +49,7 @@ export function ConversationMock() {
             color="white" 
             size="lg"
             onClick={()=>{handlePrev(); handlePrevManually();}}
-            className="!absolute top-2/4 left-0 -translate-y-2/4 bg-black/20 hover:bg-black/40"
+            className="!absolute top-2/4 left-0 -translate-y-2/4 bg-black/10 hover:bg-black/30 rounded-full"
           >
             <i className="fas fa-chevron-left text-white text-2xl" />
           </IconButton>
@@ -60,21 +60,21 @@ export function ConversationMock() {
             color="white"
             size="lg"
             onClick={()=>{handleNext(); handleNextManually();}}
-            className="!absolute top-2/4 right-0 -translate-y-2/4 bg-black/20 hover:bg-black/40"
+            className="!absolute top-2/4 right-0 -translate-y-2/4 bg-black/10 hover:bg-black/30 rounded-full"
           >
             <i className="fas fa-chevron-right text-white text-2xl" />
           </IconButton>
         )} 
         autoplay={true}
         autoplayDelay={10000}
-        className="w-1/2 rounded-xl basis-1/2">
+        className="md:w-1/2 rounded-xl basis-1/2">
         {CONVERSATIONS.map((item, idx) => (
           <ConversationCard key={`card-${idx}-${item.title}`} {...item} />
         ))}
       </Carousel>
       
       {/* 提示文字 */}
-      <div className="basis-1/2 pl-[10rem]">
+      <div className="basis-1/2 md:pl-[7rem]">
         <Typography variant="h6" color="orange" className="mb-6 font-medium">
           大模型效果演示
         </Typography>
