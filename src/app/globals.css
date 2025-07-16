@@ -3,6 +3,14 @@
 @tailwind utilities;
 @tailwind typography;
 
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-right: 0 !important;
+}
+
 .conversation-card-body {
   padding-bottom: 2.5rem;
 }

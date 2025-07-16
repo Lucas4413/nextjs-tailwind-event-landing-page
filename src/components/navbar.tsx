@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import { useGlobalStates } from '@/store/useGlobalStates';
 import {
   Navbar as MTNavbar,
   Collapse,
@@ -56,6 +57,7 @@ const NAV_MENU = [
 ];
 
 export function Navbar() {
+  const { isLoggedIn, setLoggedIn } = useGlobalStates();
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
@@ -119,9 +121,12 @@ export function Navbar() {
           ))}
         </ul> */}
         <div className="basis-1/2 flex items-center gap-4 justify-end">
+          {/* 根据登录状态显示登录按钮或用户头像 */}
+          { isLoggedIn ? "" : 
           <Button color={isScrolling ? "gray" : "white"} variant="text">
             登录
-          </Button>
+          </Button>}
+          
           {/* <a href="https://www.material-tailwind.com/blocks" target="_blank">
             <Button color={isScrolling ? "gray" : "white"}>博客</Button>
           </a> */}

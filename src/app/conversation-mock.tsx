@@ -88,7 +88,7 @@ export function ConversationMock() {
           variant="lead"
           className="mt-3 w-full !text-gray-500 "
         >
-          我们药小智模型可以回答不同子领域的问题，包括医药研发、专利布局、注册准入、中药查询等方向。
+          我们 “药小智” 大模型可以回答不同子领域的问题，包括医药研发、专利布局、注册准入、中药查询等方向。
         </Typography>
       </div>
     </section>
