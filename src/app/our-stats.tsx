@@ -86,7 +86,7 @@ export function OurStats() {
           variant="lead"
           className="mt-3 w-full !text-gray-500 lg:w-9/12"
         >
-          我们收集了生物医药行业多个子领域的大量数据集并使用这些数据来训练我们的药小智大模型。
+          我们已系统性收集生物医药行业多个子领域的海量数据集，并基于这些高质量数据完成了 “药小智” 大模型的训练工作。
         </Typography>
       </div>
       <div>
