@@ -22,7 +22,7 @@ const Copyright = () => {
         <a className="c6 hover:underline" rel="nofollow" href="https://www.12377.cn/" target="_blank">暴恐音视频举报专区   互联网违法和不良信息举报中心</a>
         <div className="fbao relative group">
           <span>涉网络暴力有害信息举报</span>
-          <div className="fbao-msg hidden absolute top-full left-0 bg-white p-2 rounded shadow-xl group-hover:block z-10 border border-black">
+          <div className="fbao-msg hidden absolute top-[-300%] left-0 bg-white p-2 rounded shadow-xl group-hover:block z-10 border border-black">
             <p>投诉热线：(023) 6262 8397</p>
             <p>邮箱：tousu@yaozh.com</p>
           </div>

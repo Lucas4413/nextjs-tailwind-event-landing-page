@@ -3,6 +3,7 @@ import { create } from 'zustand';
 // 用zustand定义全局状态和状态管理函数
 
 type UserInfo = {
+  userId: String;
   name: string;
   email: string;
   count: number;

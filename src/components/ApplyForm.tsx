@@ -1,3 +1,4 @@
+import { useGlobalStates } from "@/store/useGlobalStates";
 import {
   Card,
   Input,
@@ -18,25 +19,9 @@ const departments = ["销售部","市场部","研发部","质量部","生产部"
 
 // 药小智申请表单
 export function ApplyForm ({open, handleOpen}) {
-  // return(
-  //   <div className="fixed inset-0 h-full w-full bg-gray-900/60 z-50">
-  //     <div className="bg-white border-px border-black mt-[30%]">
-  //       <h3>【药智生物医药行业大模型】内测申请表</h3>
-  //       <p>
-  //         亲爱的药智用户：
-  //         感谢您对药智网的支持与信赖！我们诚邀您作为首批种子用户，参与【药智生物医药行业大模型】内测​​。
-  //         该大模型依托“药智数据”,“药智医械数据”等 ​​400+专业数据库​​及数千亿级高质量行业数据​​集构建而成，特别推出基于此模型的生物医药行业AI助手——​​“药小智”​​，旨在​​显著提升您在生物医药领域的情报获取与科学研究工作效率​​。
-  //         <br/><br/>
-  //         【药智生物医药行业大模型】目前处于关键内测阶段，为了给您提供更好的产品与服务，当您成功提交此报名表时，即表示您同意我们在内测期间收集您的使用反馈​​。您提供的宝贵意见将用于加速模型及应用优化，期待您的参与，共同塑造生物医药AI未来！
-  //       </p>
-  //       <div className="">
-  //         <label>
-  //           <span className="text-red-900">*</span>01
-  //           <input></input>
-  //         </label>
-  //       </div>
-  //     </div>
-  //   </div>);
+  //全局变量
+  const {userInfo} = useGlobalStates();
+  //局部变量
   const [company, setCompany] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -44,6 +29,7 @@ export function ApplyForm ({open, handleOpen}) {
   const [position, setPosition] = useState("");
   const [requirement, setRequirement] = useState("");
   const [checked, setChecked] = useState(false);
+
   return (
   //   <div className="fixed inset-0 h-full w-full bg-gray-900/60 z-50">
   //    <Card color="transparent" shadow={false} className="bg-white w-[50%]">
@@ -272,11 +258,26 @@ export function ApplyForm ({open, handleOpen}) {
           label={
             <Typography variant="small" color="gray" className="flex items-center font-normal">
               我已阅读并同意
-              <a className="text-blue-600 hover:underline">《用户协议》</a>
+              <a 
+                className="text-blue-600 hover:underline" 
+                href="https://about.yaozh.com/UserAgreement.html"
+                target="_blank">
+                《用户协议》
+              </a>
               和
-              <a className="text-blue-600 hover:underline">《隐私政策》</a>
+              <a 
+                className="text-blue-600 hover:underline"
+                href="https://about.yaozh.com/PrivacyProtection.html"
+                target="_blank">
+                《隐私政策》
+              </a>
               ，如有任何问题，请联系
-              <a className="text-blue-600 hover:underline">在线客服</a>
+              <a 
+                className="text-blue-600 hover:underline"
+                href={`https://affim.baidu.com/unique_${userInfo?.userId}/chat?siteId=22077561&userId=${userInfo?.userId}&siteToken=3ec9885e53d7f539b0e681159ec00aca&cp=&cr=&cw=Chatmeds`}
+                target="_blank">
+                在线客服
+              </a>
             </Typography>
           }
           containerProps={{ className: "-ml-2.5" }}

@@ -27,15 +27,9 @@ const LINKS = [{
 },]
 export function Footer() {
   return (
-    <footer className="md:pb-5 md:pt-5 border-t-[3px]">
-      <div className="container flex flex-col mx-auto">
+    <footer className="md:pb-5 md:pt-5 bg-[rgba(247,248,250,1)]">
+      <div className="container flex flex-col mx-auto mx-[16rem]">
         <div className="flex flex-col md:flex-row items-center !justify-between">
-          <a href="https://www.yaozh.com/" target="_blank" rel="noopener noreferrer" className="flex-1 text-center">
-            <img
-            className="w-[30%] h-auto md:inline-block hidden"
-            src="/image/赞.jpg"
-            alt="药智网Logo"/>
-          </a>
           <div className="flex-2">
             <ul className="flex md:my-4 my-1 mx-auto items-center gap-4 w-full justify-center md:justify-start">
               {LINKS.map((link, index) => (
@@ -55,13 +49,13 @@ export function Footer() {
             </ul>
             <Copyright/>
           </div>
-          <div className="flex-1 flex  md:flex-col flex-row w-fit gap-2 md:pl-[3rem]">
+          <div className="flex-1 flex flex-row w-fit gap-2 md:pl-[3rem] justify-end">
             <div className="flex flex-col items-center">
-              <img alt="微信公众号" src="/image/yaozh.png" className="w-[30%] h-auto"></img>
+              <img alt="微信公众号" src="/image/yaozh.png" className="w-[6.75rem] h-auto"></img>
               <span>药智网公众号</span> 
             </div>
             <div className="flex flex-col items-center">
-              <img alt="企业试用申请" src="/image/qrcode-zhihu.png"className="w-[30%] h-auto"></img>
+              <img alt="企业试用申请" src="/image/qrcode-zhihu.png"className="w-[6.75rem] h-auto"></img>
               <span>药智数据试用申请</span>
             </div>
           </div>

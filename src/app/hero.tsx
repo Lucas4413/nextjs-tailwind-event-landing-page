@@ -25,25 +25,34 @@ function Hero() {
   }, [open]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[url('/image/首页大图.png')] bg-cover bg-no-repeat">
-      <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
+    <div className="relative min-h-screen w-full bg-[url('/image/背景图.png')] bg-cover bg-no-repeat bg-top bg-center">
+      {/* <div className="absolute inset-0 h-full w-full bg-gray-900/60" /> */}
 
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
-          <Typography variant="h1" color="white" className="mb-2">
+          <Typography variant="h1" color="white" className="mb-2 bg-custom-gradient bg-clip-text text-transparent">
             药小智
           </Typography>
-          <Typography variant="h1" color="white" className="lg:max-w-3xl">
+          <Typography variant="h1" color="white" className="lg:max-w-3xl text-black">
             生物医药行业大模型
           </Typography>
-          <Typography
+          <Typography as="div"
             variant="lead"
             color="white"
-            className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
+            className="mt-1 mb-12 w-full md:max-w-3xl flex"
           >
-            DeepSeek基座模型 &nbsp;&nbsp;
-            千万+满血版蒸馏数据 &nbsp;&nbsp;
-            700亿参数大模型基座
+            <div className="px-[1.25rem] py-[0.5rem] bg-white text-black border-[6px] border-white rounded-full shadow-[inset_0_0_6px_0_rgba(168,196,255,1)] shadow-[0_0_8px_0_rgba(0,0,0,0.05)]">
+              <span className="bg-custom-gradient bg-clip-text text-transparent">DeepSeek</span>
+              <span>基座模型</span>
+            </div>
+            <div className="mx-[0.5rem] px-[1.25rem] py-[0.5rem] bg-white text-black border-[6px] border-white rounded-full shadow-[inset_0_0_6px_0_rgba(168,196,255,1)] shadow-[0_0_8px_0_rgba(0,0,0,0.05)]">
+              <span className="bg-custom-gradient bg-clip-text text-transparent">千万+</span>
+              <span>满血版蒸馏数据</span>
+            </div>
+            <div className="px-[1.25rem] py-[0.5rem] bg-white text-black border-[6px] border-white rounded-full shadow-[inset_0_0_6px_0_rgba(168,196,255,1)] shadow-[0_0_8px_0_rgba(0,0,0,0.05)]">
+              <span className="bg-custom-gradient bg-clip-text text-transparent">700亿</span>
+              <span>参数大模型基座</span>
+            </div>
           </Typography>
           <div className="flex items-center gap-4">
             {/* 根据登录状态来显示合适的按钮 */}
@@ -52,16 +61,16 @@ function Hero() {
                 <Button 
                   variant="gradient" 
                   color="white" 
-                  className="bg-white text-black hover:bg-gray-200">
+                  className="bg-custom-gradient">
                   立即体验
                 </Button> 
               </a>:
               <Button 
                 variant="gradient" 
                 color="white" 
-                className="bg-white text-black hover:bg-gray-200"
+                className="bg-custom-gradient text-white rounded-full h-[3rem] w-[12rem]"
                 onClick={handleOpen}>
-                立即申请
+                内测申请
               </Button> 
             }          
           </div>

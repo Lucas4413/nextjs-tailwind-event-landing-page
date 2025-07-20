@@ -73,18 +73,18 @@ export function OurStats() {
         为什么选择药小智？
       </Typography>
       <div>
-        <Typography variant="h6" color="orange" className="mb-6 font-medium">
+        <Typography variant="h6" 
+          className="w-fit bg-custom-gradient mb-6 font-medium text-white px-[10px] py-px rounded-[0.25rem]">
           大模型训练数据
         </Typography>
         <Typography
-          className="text-5xl font-bold leading-tight lg:w-3/4"
-          color="blue-gray"
+          className="text-5xl font-bold leading-tight lg:w-3/4 text-[#333333]"
         >
           全精度训练数据
         </Typography>
         <Typography
           variant="lead"
-          className="mt-3 w-full !text-gray-500 lg:w-9/12"
+          className="mt-3 w-full lg:w-9/12 text-[#333333]"
         >
           我们已系统性收集生物医药行业多个子领域的海量数据集，并基于这些高质量数据完成了 “药小智” 大模型的训练工作。
         </Typography>
