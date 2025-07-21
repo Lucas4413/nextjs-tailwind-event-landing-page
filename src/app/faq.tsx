@@ -23,7 +23,7 @@ export function Faq() {
             variant="lead"
             className="mx-auto mb-5 lg:w-3/5 text-[#666666]"
           >
-            以下是一些常见问题，帮助您更好地了解我们的产品和我们公司。
+            以下为您整理了常见问题解答，帮助您更好的了解我们的产品与公司信息。
           </Typography>
         </div>
 

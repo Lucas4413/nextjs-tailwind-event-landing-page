@@ -82,7 +82,7 @@ export function ConversationMock() {
             ))}
           </div>
         )}
-        autoplay={false}
+        autoplay={true}
         autoplayDelay={10000}
         className="md:w-1/2 rounded-xl basis-1/2">
         {CONVERSATIONS.map((item, idx) => (
@@ -106,7 +106,7 @@ export function ConversationMock() {
           variant="lead"
           className="mt-3 w-full text-[#333333]"
         >
-          我们 “药小智” 大模型可以回答不同子领域的问题，包括医药研发、专利布局、注册准入、中药查询等方向。
+          聚焦生物医药领域多个子领域的专业需求，“药小智” 大模型已实现对医药研发、专利布局、注册准入、中药查询等方向专业问题的深度解析与高效解答，为各细分场景的决策环节注入 AI 技术以实现赋能。
         </Typography>
       </div>
     </section>
