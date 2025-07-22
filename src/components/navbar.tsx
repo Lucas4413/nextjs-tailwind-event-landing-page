@@ -19,42 +19,6 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/solid";
 
-interface NavItemProps {
-  children: React.ReactNode;
-  href?: string;
-}
-
-function NavItem({ children, href }: NavItemProps) {
-  return (
-    <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="paragraph"
-        className="flex items-center gap-2 font-medium"
-      >
-        {children}
-      </Typography>
-    </li>
-  );
-}
-
-const NAV_MENU = [
-  {
-    name: "应用",
-    icon: RectangleStackIcon,
-  },
-  {
-    name: "账户",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "文档",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
-  },
-];
 
 export function Navbar() {
   const { isLoggedIn, setLoggedIn } = useGlobalStates();
@@ -62,6 +26,10 @@ export function Navbar() {
   const [isScrolling, setIsScrolling] = React.useState(false);
 
   const handleOpen = () => setOpen((cur) => !cur);
+
+  const handleLogin = () => {
+    
+  }
 
   React.useEffect(() => {
     window.addEventListener(
@@ -134,7 +102,8 @@ export function Navbar() {
           {/* 根据登录状态显示登录按钮或用户头像 */}
           { isLoggedIn ? "" : 
           <Button variant="text" 
-            className={`hidden md:inline-block text-[#333333] rounded-[20px] shadow-[0_4px_8px_0_rgba(0,0,0,0.05) ${isScrolling ? 'bg-[rgba(237,244,255,1)]' : 'bg-white'}`}>
+            className={`hidden md:inline-block text-[#333333] rounded-[20px] shadow-[0_4px_8px_0_rgba(0,0,0,0.05) ${isScrolling ? 'bg-[rgba(237,244,255,1)]' : 'bg-white'}`}
+            onClick={handleLogin}>
             登录
           </Button>}
           

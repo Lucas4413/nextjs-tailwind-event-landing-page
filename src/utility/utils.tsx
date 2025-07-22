@@ -11,3 +11,9 @@ export function extractText(children: React.ReactNode): string {
   }
   return "";
 }
+
+export function isValidChinesePhoneNumber(phone: string): boolean {
+  const phoneRegex = /^1[3-9]\d{9}$/;
+  return phoneRegex.test(phone.trim());
+}
+

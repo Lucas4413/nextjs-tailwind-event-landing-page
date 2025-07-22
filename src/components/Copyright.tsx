@@ -49,7 +49,7 @@ const Copyright = () => {
       </div>
 
       <div className="tousu">
-        <img src="/public/images/tousu.png" alt=""/>
+        {/* <img src="/public/images/tousu.png" alt=""/> */}
         <div className="tousu-msg hidden">
           <p>
             投诉热线：(023) 6262 8397
