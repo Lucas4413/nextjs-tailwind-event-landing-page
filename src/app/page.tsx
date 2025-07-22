@@ -16,7 +16,7 @@ export default function Portfolio() {
       <Navbar />
       <Hero />
       {/* <SponsoredBy /> */}
-      <div className="bg-[url('/image/bg-why.png')] bg-top bg-center">
+      <div className="bg-[url('/intro/image/bg-why.png')] bg-top bg-center">
       <OurStats />
       <ConversationMock />
       </div>

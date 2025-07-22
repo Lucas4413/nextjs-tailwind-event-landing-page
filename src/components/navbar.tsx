@@ -67,7 +67,7 @@ export function Navbar() {
         className="basis-1/2 flex items-center">
           <img
             className="md:w-[5%] w-[15%] h-auto"
-            src="/image/药小智_3D.png"
+            src="intro/image/药小智_3D.png"
             alt="药智网Logo"
           >
           </img>

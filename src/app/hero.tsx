@@ -25,7 +25,7 @@ function Hero() {
   }, [open]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[url('/image/背景图.png')] bg-cover bg-no-repeat bg-top bg-center">
+    <div className="relative min-h-screen w-full bg-[url('/intro/image/背景图.png')] bg-cover bg-no-repeat bg-top bg-center">
       {/* <div className="absolute inset-0 h-full w-full bg-gray-900/60" /> */}
 
       <div className="grid min-h-screen px-8">

@@ -51,11 +51,11 @@ export function Footer() {
           </div>
           <div className="flex-1 flex flex-row w-fit gap-2 md:pl-[3rem] justify-end">
             <div className="flex flex-col items-center">
-              <img alt="微信公众号" src="/image/yaozh.png" className="w-[6.75rem] h-auto"></img>
+              <img alt="微信公众号" src="/intro/image/yaozh.png" className="w-[6.75rem] h-auto"></img>
               <span>药智网公众号</span> 
             </div>
             <div className="flex flex-col items-center">
-              <img alt="企业试用申请" src="/image/qrcode-zhihu.png"className="w-[6.75rem] h-auto"></img>
+              <img alt="企业试用申请" src="/intro/image/qrcode-zhihu.png" className="w-[6.75rem] h-auto"></img>
               <span>药智数据试用申请</span>
             </div>
           </div>

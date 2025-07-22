@@ -13,7 +13,7 @@ export function Faq() {
   const handleOpenQ2 = (value: Boolean) => setOpenQ2(!value);
 
   return (
-    <section className="py-8 px-8 lg:py-20 bg-[url('/image/bg-faq.png')] bg-cover bg-no-repeat bg-top bg-center">
+    <section className="py-8 px-8 lg:py-20 bg-[url('/intro/image/bg-faq.png')] bg-cover bg-no-repeat bg-top bg-center">
       <div className="container mx-auto">
         <div className="text-center">
           <Typography variant="h2" className="mb-4 text-[#333333]">

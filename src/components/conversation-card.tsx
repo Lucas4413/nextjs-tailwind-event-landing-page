@@ -37,7 +37,7 @@ export function ConversationCard({ title = "", question = "", answer = "" }: Abo
               className="flex items-center h-full gap-2">
               <img
                 className="h-full w-auto"
-                src="/image/药小智_3D.png"
+                src="/intro/image/药小智_3D.png"
                 alt="药智网Logo"
                       >
               </img>
@@ -66,7 +66,7 @@ export function ConversationCard({ title = "", question = "", answer = "" }: Abo
             <div className="pr-[0.625rem] text-2xl shrink-0">
               <img
                 className="w-[1.5rem] h-[1.5rem]"
-                src="/image/药小智_3D.png"
+                src="/intro/image/药小智_3D.png"
                 alt="药智网Logo"
                       >
               </img>
